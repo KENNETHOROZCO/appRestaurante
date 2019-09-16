@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">appRestaurante</string>
+    <string name="lblNombreForm">Nombre:</string>
+    <string name="lblComidaForm">Tipo de Comida:</string>
+    <string name="lblHorarioForm">Horario_____</string>
+    <string name="lblContactoForm">Contacto______ </string>
+    <string name="lblUbicacionForm">Agregar ubicación:</string>
+    <string name="lblFotoForm">Agregar foto:</string>
 </resources>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PantallaAgregarRest">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agregar Restaurante"
+                android:textSize="24sp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="italic"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="6"
+            >
+            <TextView
+                android:id="@+id/lblRest_nombre"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:text="@string/lblNombreForm"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                android:layout_gravity="start"
+                android:padding="15dp"
+                />
+
+            <EditText
+                android:id="@+id/txtRest_nombre"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text=""
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/lblRest_tipoComida"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:padding="15dp"
+                android:text="@string/lblComidaForm"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+
+            <Spinner
+                android:id="@+id/spRest_comida"
+                android:layout_width="200dp"
+                android:layout_gravity="center"
+                android:layout_row="1"
+                android:layout_column="1"
+                ></Spinner>
+
+            <TextView
+                android:id="@+id/lblRest_horario"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:padding="15dp"
+                android:paddingEnd="0dp"
+                android:text="@string/lblHorarioForm"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+            <ImageButton
+                android:id="@+id/btnRest_agregHor"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_gravity="right"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/agregar"
+                />
+            <TextView
+                android:id="@+id/lblRest_contacto"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:padding="15dp"
+                android:paddingEnd="0dp"
+                android:text="@string/lblContactoForm"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+            <ImageButton
+                android:id="@+id/btnRest_agregCont"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:layout_gravity="right"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="35dp"
+                android:background="@drawable/agregar"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rVRest_horario"
+                android:layout_width="160dp"
+                android:layout_height="100dp"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_marginTop="50dp"
+                android:paddingStart="15dp"
+                android:paddingTop="5dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rVRest_contacto"
+                android:layout_width="180dp"
+                android:layout_height="100dp"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:layout_marginTop="50dp"
+                android:paddingStart="15dp"
+                android:paddingTop="5dp"/>
+
+            <TextView
+                android:id="@+id/lblRest_ubicacion"
+                android:layout_row="3"
+                android:layout_column="0"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:padding="15dp"
+                android:paddingEnd="0dp"
+                android:text="@string/lblUbicacionForm"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+            <ImageButton
+                android:id="@+id/btnRest_ubicacion"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_row="3"
+                android:layout_column="0"
+                android:layout_gravity="right"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/ubicacion"
+                />
+
+            <TextView
+                android:id="@+id/lblRest_foto"
+                android:layout_row="3"
+                android:layout_column="1"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:padding="15dp"
+                android:paddingEnd="0dp"
+                android:text="@string/lblFotoForm"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+            <ImageButton
+                android:id="@+id/btnRest_foto"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_row="3"
+                android:layout_column="1"
+                android:layout_gravity="right"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="35dp"
+                android:background="@drawable/foto"
+                />
+
+            <Button
+                android:id="@+id/btnRest_aceptar"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_row="5"
+                android:layout_column="0"
+                android:text="Aceptar"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                />
+            <Button
+                android:id="@+id/btnRest_cancelar"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_row="5"
+                android:layout_column="1"
+                android:text="Cancelar"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                />
+
+
+
+        </GridLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
